@@ -4,7 +4,8 @@ pipeline{
         steps{
             stage('Checkout'){
                 step{
-                    git branch main ,url:'https://github.com/Jaya-sri26/DevOpsInternal.git'
+                    git branch main,
+                        url:'https://github.com/Jaya-sri26/DevOpsInternal.git'
                 }
             }
             stage('Test'){
