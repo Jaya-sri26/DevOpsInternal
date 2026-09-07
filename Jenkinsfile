@@ -2,7 +2,7 @@ pipeline{
     agent any
     stages{
         stage('Checkout'){
-            git branch 'https://github.com/Jaya-sri26/DevOpsInternal.git'
+            branch main ,'https://github.com/Jaya-sri26/DevOpsInternal.git'
             }
         }
         stage('Test'){
