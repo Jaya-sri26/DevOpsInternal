@@ -1,21 +1,32 @@
 pipeline{
     agent any
     stages{
-        stage('Checkout'){
-            git branch main ,url:'https://github.com/Jaya-sri26/DevOpsInternal.git'
+        steps{
+            stage('Checkout'){
+                step{
+                    git branch main ,url:'https://github.com/Jaya-sri26/DevOpsInternal.git'
+                }
             }
-        }
-        stage('Test'){
-            javac TestFactorial Factorial
-        }
-        stage('Run'){
-            java Factorial
-        }
-        stage('Package Jar'){
-            jar cfm -c factorial Factorial
-        }
-        stage('Archive Artifact'){
-            echo "ArchiveArtifact"
+            stage('Test'){
+                step{
+                    javac TestFactorial Factorial
+                }
+            }
+            stage('Run'){
+                step{
+                    java Factorial
+                }
+            }
+            stage('Package Jar'){
+                step{
+                    jar cfm -c factorial Factorial
+                }
+            }
+            stage('Archive Artifact'){
+                step{
+                    echo "ArchiveArtifact"
+                }
+            }
         }
     }
     post{
