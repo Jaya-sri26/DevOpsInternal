@@ -2,8 +2,7 @@ pipeline{
     agent any
     stages{
         stage('Checkout'){
-            git branch-static main(args) {
-                git repository url:'https://github.com/Jaya-sri26/DevOpsInternal.git'
+            git branch 'https://github.com/Jaya-sri26/DevOpsInternal.git'
             }
         }
         stage('Test'){
