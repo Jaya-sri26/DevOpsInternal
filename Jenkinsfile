@@ -7,7 +7,7 @@ pipeline{
             }
         }
         stage('Test'){
-            javac TestFactorial.java Factorial.java
+            javac TestFactorial Factorial
         }
         stage('Run'){
             java Factorial
